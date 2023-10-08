@@ -26,24 +26,14 @@
 
     <!-- Remove this and fill in your name & photo in the required areas -->
     <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
+      
     </script>
 
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
 
     <!-- Set Page Title Here -->
-    <title></title>
+    <title>Kristin Agwale</title>
   </head>
 
   <body>
@@ -95,7 +85,8 @@
       >
       <!-- Set Photo Here -->
         <img
-          style="height: 150px; width: 150px"
+          src="images/kristin2.jpg"
+          style="height: 290px; width: 320px"
           class="rounded-circle"
           draggable="false"
           id="profilepic"
@@ -104,8 +95,8 @@
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
-          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm Kristin Agwale
+          <span id="name" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>!
         </h4>
       </div>
       <div class="row mx-auto">
@@ -113,32 +104,42 @@
           Information Science & Technology Student at Temple University
         </h5>
       </div>
+         <!-- Button for modal -->
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  About Me
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">About Me</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        I am currently a senior at Temple University. I just finished an internship at the Smithsonian
+        National Mueseum of African American History & Culture as a Web Content Assistant where I helped
+        manage and edit their Drupal website. I also created a wireframe that served as a template for 
+        one of their websites. I now currently work for the Temple football team where I help film
+        their practices and games so that the players and coaches can watch it back and make improvements.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       <div class="row my-4 language-wrapper row-gap-5 col-gap-1 gap-lg-2">
         <div class="col text-center">
           <img
-            src="images/python.jpg"
+            src="images/photoshop_illustrator_cs6_icons_1.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="Python"
+            title="Adobe"
           />
         </div>
-        <div class="col text-center">
-          <img
-            src="images/angular.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Angular"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/typescript.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="TypeScript"
-          />
-        </div>
-
+      
         <div class="col text-center">
           <img
             src="images/csharp.jpg"
@@ -149,10 +150,10 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/node.jpg"
+            src="images/HTML5-CSS3-JS-460x460.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="Node.js"
+            title="HTML/CSS/JS"
           />
         </div>
         <div class="col text-center">
@@ -182,10 +183,10 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/mongodb.jpg"
+            src="images/drupal.png"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="MongoDB"
+            title="Drupal"
           />
         </div>
       </div>
@@ -203,56 +204,99 @@
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
       id="projects"
     >
+   
+    <div class="container section mt-5">
+      <div class="row mx-auto">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card border-primary">
+            <div class="card-body">
+              <div class="row mx-auto">
+                <h4 class="h1 font-weight-bold mx-auto text-center">Fun Facts</h4>
+              </div> 
+              <p class="card-text">
+                Some fun facts about me are that I love to read and watch Netflix. I'm always looking for new things to read or watch. I also love to listen to music, and my favorite genre is afrobeats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container section mt-5">
+      <div class="row mx-auto">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card border-primary">
+            <div class="card-body">
+              <div class="row mx-auto">
+                <h4 class="h1 font-weight-bold mx-auto text-center">Interests</h4>
+              </div> 
+              <p class="card-text">
+                I am interested in pursuing a career in web development, database management, cyber security or UX/UI Design.
+                Set to graduate in 2024, I'm on the lookout for exciting new grad roles. If you've got questions or enticing 
+                positions that align with my interests, I'm all ears! Feel free to reach out—I'm ready for the next adventure. Thanks!              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+<br>
+
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">Projects</h4>
       </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
-          I've worked on some neat things.
-        </h5>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h5>Tutor Booking Website</h5>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              For this project, I crafted a web application with a peer utilizing Svelte JS, 
+              feature that empowers users to schedule appointments for learning various programming languages 
+              with different tutors. The application boasts functionalities that enable users to effortlessly book, 
+              modify, or cancel appointments. To elevate the overall user experience, we seamlessly integrated Bootstrap, 
+              giving the interface a sleek and visually appealing touch.            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              AsterAid Database
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              In this project, I collaborated within a team to develop a database for a company we created called 
+              AsterAid which is an asteroid mining company. Our initial steps involved crafting entity relational diagrams and relational 
+              diagrams to meticulously plan the database structure. Following this, we designed and implemented tables, populating 
+              them with relevant data. To extract valuable insights, we formulated and executed queries that efficiently retrieved 
+              information from the database.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Ordering System
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              In this project, I worked with a peer to build an ordering system using ASP.NET C#. 
+              The foundation of our work involved implementing databases to store crucial information such as menu items, 
+              customer details, and order records. To ensure the robustness and reliability of the application, we employed 
+              unit testing. This not only validated the functionality but also contributed to the overall dependability of the system.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Query Dating Site</h5>
-      </div>
-      <div class="row w-100">
-        <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
-        </p>
-      </div>
+      
       <div class="row mt-3 next">
         <a href="#courses" class="col"
           ><iconify-icon
@@ -305,7 +349,7 @@
           href="https://bulletin.temple.edu/search/?P=CIS%203344"
           target="_blank"
         >
-          <h5 class="m-0">Client-Side Scripting</h5>
+          <h5 class="m-0">Client-Side Scripting For the Web</h5>
         </a>
         <a
           class="col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
@@ -348,7 +392,7 @@
         </h5>
       </div>
       <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
+        <a href="mailto:kagwale1@gmail.com" class="col text-black">
           <iconify-icon
             icon="logos:google-gmail"
             width="60"
@@ -358,7 +402,7 @@
             title="Email"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
+        <a href="https://www.linkedin.com/in/kristin-agwale-3005a9220/" class="col"
           ><iconify-icon
             icon="skill-icons:linkedin"
             width="60"
@@ -368,7 +412,7 @@
             title="LinkedIn"
           ></iconify-icon>
         </a>
-        <a href="https://github.com/johndoe" class="col"
+        <a href="https://github.com/kristinagwale" class="col"
           ><iconify-icon
             icon="skill-icons:github-dark"
             width="60"
